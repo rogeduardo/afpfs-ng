@@ -343,8 +343,6 @@ void * cmdline_ui(void * other)
 
 static void ending(void)
 {
-	if (full_url==0)
-		printf("Forced exit\n");
 	cmdline_afp_exit();
 	tty_reset(STDIN_FILENO);
 	exit(1);
