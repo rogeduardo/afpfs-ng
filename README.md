@@ -19,7 +19,7 @@ Read NEWS for more details.
 Pretty standard unix stuff:
 ```bash
 apt update
-apt install fuse git gcc g++ libfuse-dev libreadline-dev libncurses5-dev libgmp3-dev libgcrypt20-dev make -y
+apt install fuse git gcc g++ libfuse-dev libreadline-dev libncurses-dev libgmp3-dev libgcrypt20-dev make -y
 git clone https://github.com/rogeduardo/afpfs-ng.git
 cd afpfs-ng
 ./configure --enable-gcrypt=/usr/lib
