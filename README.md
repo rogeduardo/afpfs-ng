@@ -18,7 +18,15 @@ Read NEWS for more details.
 
 Pretty standard unix stuff:
 ```bash
-./configure && make && sudo make install && echo 'done!'
+apt update
+apt install fuse git gcc g++ libfuse-dev libreadline-dev libncurses5-dev libgmp3-dev libgcrypt20-dev make -y
+git clone https://github.com/rogeduardo/afpfs-ng.git
+./configure --enable-gcrypt=/usr/lib
+cd afpfs-ng
+make
+make install
+rm -f /etc/ld.so.cache
+ldconfig
 ```
 
 Use --disable-fuse and/or --disable-gcrypt if your system cannot meet those dependancies.
