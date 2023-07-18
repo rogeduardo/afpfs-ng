@@ -1,8 +1,6 @@
 #ifndef CMDLINE_AFP_H_
 #define CMDLINE_AFP_H_
 
-int full_url;
-
 int com_connect(char * arg);
 int com_dir(char * arg);
 int com_chmod(char * arg);
