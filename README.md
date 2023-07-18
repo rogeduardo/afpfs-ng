@@ -21,8 +21,8 @@ Pretty standard unix stuff:
 apt update
 apt install fuse git gcc g++ libfuse-dev libreadline-dev libncurses5-dev libgmp3-dev libgcrypt20-dev make -y
 git clone https://github.com/rogeduardo/afpfs-ng.git
-./configure --enable-gcrypt=/usr/lib
 cd afpfs-ng
+./configure --enable-gcrypt=/usr/lib
 make
 make install
 rm -f /etc/ld.so.cache
