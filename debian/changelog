@@ -1,0 +1,25 @@
+afpfs-ng (0.8.1-1) unstable; urgency=medium
+
+  * New upstream release 0.8.1
+  * Initial build for Debian.
+  * See Fedora changelog for previous history.
+
+ -- Alex deVries <alexthepuffin@gmail.com>  Fri, 15 Feb 2008 00:00:00 +0000
+
+afpfs-ng (0.4.1-1) unstable; urgency=medium
+
+  * New upstream release 0.4.1
+
+ -- Alex deVries <alexthepuffin@gmail.com>  Sat, 31 Mar 2007 00:00:00 +0000
+
+afpfs-ng (0.4-1) unstable; urgency=medium
+
+  * New upstream release 0.4
+
+ -- Alex deVries <alexthepuffin@gmail.com>  Sun, 11 Feb 2007 00:00:00 +0000
+
+afpfs-ng (0.1-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Houritsuchu <houritsuchu@hotmail.com>  Tue, 28 Nov 2006 00:00:00 +0000
