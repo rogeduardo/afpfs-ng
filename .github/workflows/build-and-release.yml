@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y fuse git gcc g++ libfuse-dev libreadline-dev libncurses-dev libgmp3-dev libgcrypt20-dev make devscripts debhelper
+        sudo apt-get install -y fuse git gcc g++ libfuse-dev libreadline-dev libncurses-dev libgmp3-dev libgcrypt20-dev make devscripts debhelper dh-make
 
     - name: Build DEB package
       run: |
