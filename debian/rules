@@ -12,11 +12,12 @@ include /usr/share/dpkg/default.mk
 	dh $@ 
 
 override_dh_auto_configure:
-	./configure --enable-gcrypt=/usr/lib
+	./configure --enable-gcrypt=/usr/lib --prefix=/usr
 
 override_dh_auto_build:
 	make
 
 override_dh_auto_install:
 	make install DESTDIR=$(CURDIR)/debian/afpfs-ng
-
+#	mv $(CURDIR)/debian/afpfs-ng/usr/local/bin/* $(CURDIR)/debian/afpfs-ng/usr/bin/
+#	rm -r $(CURDIR)/debian/afpfs-ng/usr/local/bin
