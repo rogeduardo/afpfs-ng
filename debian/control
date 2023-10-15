@@ -1,0 +1,20 @@
+Source: afpfs-ng
+Section: net
+Priority: optional
+Maintainer: Alex deVries <alexthepuffin@gmail.com>
+Build-Depends: debhelper (>= 9), fuse-devel, libgcrypt-dev, libgmp-dev, libreadline-dev
+Standards-Version: 3.9.8
+Homepage: http://sourceforge.net/projects/afpfs-ng
+
+Package: afpfs-ng
+Architecture: any
+Depends: libgcrypt20, libgmp10, libreadline7, ${misc:Depends}
+Description: Apple Filing Protocol client
+ AFPFS-NG is an Apple Filing Protocol client that will allow Linux and BSD systems to see files exported from a Mac OS system or netatalk with AFP over TCP.
+
+Package: afpfs-ng-devel
+Architecture: any
+Section: libdevel
+Depends: afpfs-ng (= ${binary:Version}), ${misc:Depends}
+Description: Headers for AFP clients
+ AFPFS-NG development files for new clients
