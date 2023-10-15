@@ -21,7 +21,7 @@ jobs:
 
     - name: Build DEB package
       run: |
-        dh_make --createorig -y -s
+        dh_make -p afpfs-ng_0.8.1 --createorig -y -s
         dpkg-buildpackage -us -uc
 
     - name: Upload DEB package to GitHub Releases
