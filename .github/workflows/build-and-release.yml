@@ -1,0 +1,35 @@
+name: Build and Release DEB Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fuse git gcc g++ libfuse-dev libreadline-dev libncurses-dev libgmp3-dev libgcrypt20-dev make devscripts debhelper
+
+    - name: Build DEB package
+      run: |
+        dpkg-buildpackage -us -uc
+
+    - name: Upload DEB package to GitHub Releases
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        name: Release v${{ github.ref }}
+        tag_name: ${{ github.ref }}
+        prerelease: false
+        files: |
+          ../*.deb
